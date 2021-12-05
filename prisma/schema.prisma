@@ -11,14 +11,14 @@ datasource db {
 }
 
 model User {
-  id                    Int      @id @default(autoincrement())
-  email                 String   @unique
+  id                    Int       @id @default(autoincrement())
+  email                 String    @unique
   firstName             String
   lastName              String
-  status                Status?   @default(PENDING)
-  role                  Role?     @default(USER)
+  status                Status    @default(PENDING)
+  role                  Role      @default(USER)
   password              String
-  makretingPermission   Boolean?  @default(true)
+  makretingPermission   Boolean  @default(true)
 }
 
 enum Role {
